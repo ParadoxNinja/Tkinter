@@ -8,8 +8,8 @@ def multiply():
     t1.insert(END,answer)
 
 w = Tk()
-b1 = Button(w,text= "Execute")
-b1.grid(row=0,column = 1,command=multiply)
+b1 = Button(w,text= "Execute",command=multiply)
+b1.grid(row=0,column = 1)
 
 e1Value = StringVar()
 e2Value = StringVar()
