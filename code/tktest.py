@@ -3,13 +3,36 @@ from tkinter import *
 
 from setuptools import Command
 
-def multiply():
+def multiplication():
     answer = float(e1Value.get())*float(e2Value.get())
     t1.insert(END,answer)
 
+def division():
+    answer = float(e1Value.get())/float(e2Value.get())
+    t1.insert(END,answer)
+
+def addition():
+    answer = float(e1Value.get())+float(e2Value.get())
+    t1.insert(END,answer)
+
+def subtraction():
+    answer = float(e1Value.get())-float(e2Value.get())
+    t1.insert(END,answer)
+
 w = Tk()
-b1 = Button(w,text= "Execute",command=multiply)
-b1.grid(row=0,column = 1)
+
+multiply = Button(w,text= "Multiply",command=multiplication)
+multiply.grid(row=0,column = 0)
+
+divide = Button(w,text= "Divide",command=division)
+divide.grid(row=1,column = 0)
+
+add = Button(w,text= "Add",command=addition)
+add.grid(row=2,column = 0)
+
+sub = Button(w,text= "Subtract",command=subtraction)
+sub.grid(row=3,column = 0)
+
 
 e1Value = StringVar()
 e2Value = StringVar()
